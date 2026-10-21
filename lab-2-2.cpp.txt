@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    char simvol;
+    cout << "Vvedite simvol (t, z, v, vsk, dv, tv): ";
+    cin >> simvol;
+
+    switch (simvol) {
+        case 't':
+        case 'T':
+            cout << "tochka" << endl;
+            break;
+        case 'z':
+        case 'Z':
+            cout << "zapyataya" << endl;
+            break;
+        case 'v':
+        case 'V':
+            cout << "vosklicatel'nyy znak" << endl;
+            break;
+        case 'q':
+        case 'Q':
+            cout << "voprositel'nyy znak" << endl;
+            break;
+        case 'd':
+        case 'D':
+            cout << "dvoetochie" << endl;
+            break;
+        case 's':
+        case 'S':
+            cout << "tochka s zapyatoy" << endl;
+            break;
+        default:
+            cout << "takogo simvola net" << endl;
+    }
+
+    return 0;
+}
