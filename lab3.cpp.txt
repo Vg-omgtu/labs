@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    // Задача 10: Найти максимальный элемент в последовательности из n чисел
+    cout << "Zadacha 10. Vvedite n: ";
+    int n;
+    cin >> n;
+    int max_val = -1000000;
+    cout << "Vvedite " << n << " chisel: ";
+    for(int i = 0; i < n; i++) {
+        int x;
+        cin >> x;
+        if(x > max_val) max_val = x;
+    }
+    cout << "Maksimalniy element: " << max_val << endl << endl;
+
+    // Задача 31: Найти СУММУ НОМЕРОВ минимального и максимального элементов
+    cout << "Zadacha 31. Vvedite chisla (0 - konec): ";
+    int min_val = 1000000, max_val = -1000000;
+    int min_pos = 0, max_pos = 0;
+    int x;
+    int pos = 1; // нумерация с 1
+    cin >> x;
+    while(x != 0) {
+        if(x < min_val) {
+            min_val = x;
+            min_pos = pos;
+        }
+        if(x > max_val) {
+            max_val = x;
+            max_pos = pos;
+        }
+        pos++;
+        cin >> x;
+    }
+    cout << "Summa nomerov min i max: " << min_pos + max_pos << endl << endl;
+
+    // Задача 50: Найти КОЛИЧЕСТВО ЦИФР в числе k
+    cout << "Zadacha 50. Vvedite chislo k: ";
+    int k;
+    cin >> k;
+    if(k < 0) k = -k;
+    if(k == 0) {
+        cout << "Kolichestvo cifr: 1" << endl;
+    } else {
+        int count = 0;
+        while(k > 0) {
+            count++;
+            k /= 10;
+        }
+        cout << "Kolichestvo cifr: " << count << endl;
+    }
+
+    return 0;
+}
